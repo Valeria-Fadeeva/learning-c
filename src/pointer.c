@@ -3,24 +3,41 @@
 int main(void)
 {
     int x = 10;
-    int *p;
-    p = &x;
-    printf("Address = %p\tPtr address = %p\n", p, &p);
-    printf("x = %d\n", *p);
+    /*int *p;
+    p = &x;*/
+    int *p = &x;
+
+    printf(
+        "Address of var = %p\tAddress ptr to var = %p\tAddress of ptr = %p\tp = %d\n",
+        &p, p, &p, *p
+        );
 
     int y = *p;
-    printf("Address = %p\tPtr address = %p\n", &y, &p);
-    printf("y = %d\n", y); // 10
+    printf(
+        "Address of var = %p\tAddress ptr to var = %p\tAddress of ptr = %p\ty = %d\n",
+        &y, p, &p, y
+        );
 
     *p = 45;
-    printf("Address = %p\tPtr address = %p\n", p, &p);
-    printf("x = %d\n", x); // 45
+    printf(
+        "Address of var = %p\tAddress ptr to var = %p\tAddress of ptr = %p\tx = %d\n",
+        &x, p, &p, x
+        );
+
 
     char c = 'N';
     char *pc = &c;
     int *pd = (int *)pc;
-    printf("pc = %p\n", pc);
-    printf("pd = %p\n", pd);
+
+    printf(
+        "Address of var = %p\tAddress ptr to var = %p\tAddress of ptr = %p\tc = %c\n",
+        &c, pc, &pc, c
+        );
+
+    printf(
+        "Address of var = %p\tAddress ptr to var = %p\tAddress of ptr = %p\tc = %c\n",
+        &c, pd, &pd, c
+        );
 
     return 0;
 }

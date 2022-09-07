@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void)
 {
     int numbers[3][2] = { {1, 2}, {4, 5}, {7, 8} };
 
-    for(int i =0; i < 3; i++)
+    for (int i =0; i < 3; i++)
     {
         for(int j =0; j<2; j++)
         {
@@ -12,5 +13,5 @@ int main(void)
         }
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }
